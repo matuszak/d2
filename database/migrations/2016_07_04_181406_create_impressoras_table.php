@@ -15,6 +15,7 @@ class CreateImpressorasTable extends Migration
         Schema::create('impressoras', function (Blueprint $table) {
             $table->increments('id');
             $table->string('modelo', 25);
+
             $table->timestamps();
         });
     }

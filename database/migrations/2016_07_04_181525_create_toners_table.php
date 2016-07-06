@@ -14,13 +14,13 @@ class CreateTonersTable extends Migration
     {
         Schema::create('toners', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('dataRecarga');
+            $table->date('data_recarga');
 
-            $table->integer('id_impressora')->unsigned;
-            $table->integer('id_user')->unsigned;
+            $table->integer('impressora_id')->unsigned();
+            $table->integer('user_id')->unsigned();
 
-            $table->foreign('id_impressora')->references('id')->on('impressoras');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('impressora_id')->references('id')->on('impressoras');
+            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
         });

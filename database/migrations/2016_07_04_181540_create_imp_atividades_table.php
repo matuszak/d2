@@ -14,6 +14,8 @@ class CreateImpAtividadesTable extends Migration
     {
         Schema::create('imp_atividades', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nome', 60);
+
             $table->timestamps();
         });
     }

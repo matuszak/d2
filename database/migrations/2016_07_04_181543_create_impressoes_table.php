@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateImpressaosTable extends Migration
+class CreateImpressoesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -23,10 +23,10 @@ class CreateImpressaosTable extends Migration
             $table->string('observacao', 200);
 
 
-            $table->integer('cliente_id')->unsined();
+            $table->integer('cliente_id')->unsigned();
             $table->integer('impressora_id')->unsigned();
-            $table->integer('imp_atividade_id')->unsined();
-            $table->integer('toner_id')->unsined();
+            $table->integer('imp_atividade_id')->unsigned();
+            $table->integer('toner_id')->unsigned();
             $table->integer('user_id')->unsigned();
 
             $table->foreign('cliente_id')->references('id')->on('clientes');
